@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Holla</title>
+</head>
+<body>
+<h1>Is this your final decision?</h1>
+
+<!--FORM TO DELETE-->
+<form method ="post">
+    <!--something about hackers-->
+    {% csrf_token %}
+    <!--to show selected user-->
+    Goodbye, {{ byebye }}
+    <!--button to delete-->
+    <input type ="submit" value="Delete"/>
+</form>
+
+</body>
+</html>

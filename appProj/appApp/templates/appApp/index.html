@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>App List</title>
+</head>
+<body>
+<h1>Applicants</h1>
+
+<!--LINK TO CREATE NEW APP-->
+<a href="{% url 'create' %}">Add Applicant</a>
+
+<!--TO LIST ALL ENTRIES IN MODEL BY OBJECT-->
+{% for person in everyApp %}
+    <p>Name: {{ person.fName }} {{ person.lName }} </p>
+    <p>Email: {{ person.email }}</p>
+    <p>Cell: {{ person.pNum }}</p>
+
+<!--LINK TO EDIT-->
+    <p><a href="{% url 'edit' person.id %}">Edit Information</a></p>
+
+<!--LINK TO DELETE-->
+    <p><a href="{% url 'delete' person.id %}">We Dont Want You</a></p>
+
+<!--TO MAKE A LINE-->
+    <hr/>
+{% endfor %}
+
+
+</body>
+</html>

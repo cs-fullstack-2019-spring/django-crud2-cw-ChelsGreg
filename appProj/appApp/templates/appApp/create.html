@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Applicant</title>
+</head>
+<body>
+<h1>New Applicant Form</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <!--calling form function to display on separate line-->
+    {{ newApp.as_p }}
+    <input type="submit" value="submit">
+</form>
+
+</body>
+</html>
